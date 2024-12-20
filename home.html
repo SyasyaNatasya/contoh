@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>  
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('d3.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff; /* White text */
+            text-align: center;
+        }
+
+        /* Header Navigation */
+        header {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 10;
+        }
+
+        header nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        header nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        header nav a:hover {
+            color: #f3c97d;
+        }
+
+        /* Main Section with Centered Content */
+        .main-content {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Profile Picture */
+        .profile-pic {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            border: 5px solid rgba(255, 255, 255, 0.8);
+            object-fit: cover;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            margin: 30px auto 20px;
+            display: block;
+            animation: zoomInOut 2s infinite alternate;
+        }
+
+        @keyframes zoomInOut {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.1);
+            }
+        }
+
+        /* Site Title & Subtitle */
+        h2 {
+            font-size: 1.5rem;
+            font-family: 'Poppins', sans-serif;
+            font-weight: normal;
+            margin-bottom: 20px;
+        }
+
+        /* ENTER Button Styling with Bounce Animation */
+        .enter-button a {
+            display: inline-block;
+            text-decoration: none;
+            background-color: #000;
+            color: #fff;
+            padding: 10px 30px;
+            border: 2px solid #f3c97d;
+            border-radius: 25px;
+            font-size: 1rem;
+            animation: bounce 2s infinite;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        .enter-button a:hover {
+            background-color: #f3c97d;
+            color: #000;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-15px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+
+        /* Social Media Icons */
+        .social-media {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .social-media a {
+            color: #000000;
+            font-size: 2rem;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .social-media a:hover {
+            transform: scale(1.2);
+            color: #f3c97d;
+        }
+
+        /* Minimalist Audio Player */
+        .audio-player {
+            margin-top: 20px;
+        }
+
+        .audio-player audio {
+            outline: none;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            border: 2px solid ;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+        }
+
+        audio::-webkit-media-controls-panel {
+            background-color: rgba(255,255,255,0.5);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header Navigation -->
+    <header>
+        <nav>
+            <a href="home.html"><i class="fas fa-home"></i> Home</a>
+            <a href="about.html"><i class="fas fa-user"></i> About Me</a>
+            <a href="education.html"><i class="fas fa-graduation-cap"></i> Education</a>
+            <a href="experience.html"><i class="fas fa-briefcase"></i> Experience</a>
+            <a href="family.html"><i class="fas fa-users"></i> Family</a>
+            <a href="gallery.html"><i class="fas fa-images"></i> Gallery</a>
+            <a href="contact.html"><i class="fas fa-envelope"></i> Contact Me</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <img src="tasya.jpg" alt="Profile Picture" class="profile-pic"> <!-- Replace with your image -->
+        <h2>Welcome to Natasya Website<br>A place where she meets her soul and passion</h2>
+        <div class="audio-player">
+            <audio controls autoplay>
+                <source src="song.mp3" type="audio/mpeg"> <!-- Replace with your audio file -->
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div class="enter-button">
+            <a href="about.html">GET TO KNOW ME</a>
+        </div>
+        <div class="social-media">
+            <a href="https://www.instagram.com/natasyarizall" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/01111024585" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://t.me/nsnsyaa" target="_blank"><i class="fab fa-telegram"></i></a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Natasya Shah. Designed with love and pure soul.</p>
+    </footer>
+</body>
+</html>

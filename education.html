@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: url('d3.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+            text-align: center;
+        }
+
+        /* Header Navigation */
+        header {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 10;
+        }
+
+        header nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        header nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        header nav a:hover {
+            color: #f3c97d;
+        }
+
+        /* Page Title */
+        .page-title {
+            font-size: 2.5rem;
+            font-family: 'Great Vibes', cursive;
+            color: white; /* Title color changed to white */
+            margin-top: 120px; /* Spacing from the fixed header */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Main Content */
+        .education-container {
+            margin: 30px auto;
+            max-width: 1000px;
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+            align-items: flex-start;
+            padding: 20px;
+        }
+
+        .education-card {
+            width: 300px;
+            background: #f9f9f9; /* Minimalist light background */
+            border: 1px solid #e0e0e0; /* Soft border */
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .education-card:hover {
+            transform: scale(1.05); /* Slight zoom on hover */
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+        }
+
+        .education-card h2 {
+            font-size: 1.4rem;
+            color: #ff6f61;
+            margin-bottom: 10px;
+        }
+
+        .image-frame {
+            margin: 0 auto 15px;
+            border: 3px solid #e0e0e0;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .image-frame img {
+            width: 100%;
+            display: block;
+        }
+
+        .education-card p {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.5;
+            margin-top: 10px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+    <!-- Fonts and Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header Navigation -->
+    <header>
+        <nav>
+            <a href="home.html"><i class="fas fa-home"></i> Home</a>
+            <a href="about.html"><i class="fas fa-user"></i> About Me</a>
+            <a href="education.html"><i class="fas fa-graduation-cap"></i> Education</a>
+            <a href="experience.html"><i class="fas fa-briefcase"></i> Experience</a>
+            <a href="family.html"><i class="fas fa-users"></i> Family</a>
+            <a href="gallery.html"><i class="fas fa-images"></i> Gallery</a>
+            <a href="contact_me.html"><i class="fas fa-envelope"></i> Contact Me</a>
+        </nav>
+    </header>
+
+    <!-- Page Title -->
+    <h1 class="page-title">My Education Journey</h1>
+
+    <!-- Main Content -->
+    <div class="education-container">
+        <!-- Middle School -->
+        <div class="education-card">
+            <div class="image-frame">
+                <img src="middle.jpg" alt="Middle School">
+            </div>
+            <h2>Sekolah Kebangsaan Paya Bunga</h2>
+            <p>Attended Middle School, where I built a strong foundation for learning and personal growth.</p>
+        </div>
+
+        <!-- High School -->
+        <div class="education-card">
+            <div class="image-frame">
+                <img src="high2.png" alt="High School">
+            </div>
+            <h2>Sekolah Menengah Agama Khairiah</h2>
+            <p>Graduated from High School, where I excelled academically and enjoyed participating in extracurricular activities.</p>
+        </div>
+
+        <!-- University -->
+        <div class="education-card">
+            <div class="image-frame">
+                <img src="uni.png" alt="University">
+            </div>
+            <h2>University Teknologi MARA</h2>
+            <p>Currently pursuing my diploma at UITM, focusing on my passions and preparing for a bright future.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Natasya Shah. Designed with love and pure soul.</p>
+    </footer>
+</body>
+</html>
+

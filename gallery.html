@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Comic Neue', cursive;
+            margin: 0;
+            padding: 0;
+            background: url('d3.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #4a4a4a;
+            text-align: center;
+        }
+
+        /* Header Navigation */
+        header {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 10;
+        }
+
+        header nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        header nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2rem;
+            transition: color 0.3s ease, transform 0.2s ease;
+        }
+
+        header nav a:hover {
+            color: #f3c97d;
+            transform: scale(1.1);
+        }
+
+        header nav a i {
+            margin-right: 5px;
+        }
+
+        /* Transparent Frame */
+        .transparent-frame {
+            margin: 120px auto 50px;
+            max-width: 700px;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        /* Title Styling */
+        .gallery-title {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3rem;
+            color: #4a4a4a;
+            margin-bottom: 20px;
+        }
+
+        /* Slideshow Styling */
+        .slideshow-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+
+        .slideshow-track {
+            display: flex;
+            transition: transform 0.8s ease-in-out;
+        }
+
+        .slideshow-slide {
+            min-width: 100%;
+            position: relative;
+            transition: transform 0.8s ease;
+        }
+
+        .slideshow-slide img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .slideshow-text {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header Navigation -->
+    <header>
+        <nav>
+            <a href="home.html"><i class="fas fa-home"></i> Home</a>
+            <a href="about.html"><i class="fas fa-user"></i> About Me</a>
+            <a href="education.html"><i class="fas fa-graduation-cap"></i> Education</a>
+            <a href="experience.html"><i class="fas fa-briefcase"></i> Experience</a>
+            <a href="family.html"><i class="fas fa-users"></i> Family</a>
+            <a href="gallery.html"><i class="fas fa-images"></i> Gallery</a>
+            <a href="contact.html"><i class="fas fa-envelope"></i> Contact Me</a>
+        </nav>
+    </header>
+
+    <!-- Transparent Frame -->
+    <div class="transparent-frame">
+        <!-- Title Content -->
+        <div class="gallery-title">Welcome to My Gallery</div>
+
+        <!-- Slideshow Gallery -->
+        <div class="slideshow-container">
+            <div class="slideshow-track" id="slideshowTrack">
+                <div class="slideshow-slide">
+                    <img src="01.jpg" alt="Image 1">
+                    <div class="slideshow-text">Pantai Batu Buruk Beach</div>
+                </div>
+                <div class="slideshow-slide">
+                    <img src="02.jpg" alt="Image 2">
+                    <div class="slideshow-text">Travelling Vibes</div>
+                </div>
+                <div class="slideshow-slide">
+                    <img src="03.jpg" alt="Image 3">
+                    <div class="slideshow-text">My Lovely Bestie</div>
+                </div>
+                <div class="slideshow-slide">
+                    <img src="04.jpg" alt="Image 4">
+                    <div class="slideshow-text">My Uni Classmate</div>
+                </div>
+                <div class="slideshow-slide">
+                    <img src="05.jpg" alt="Image 5">
+                    <div class="slideshow-text">Cafe Hunting</div>
+                </div>
+                <div class="slideshow-slide">
+                    <img src="06.jpg" alt="Image 6">
+                    <div class="slideshow-text">Night View</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Natasya Shah. Designed with love and pure soul.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.slideshow-slide');
+        const totalSlides = slides.length;
+        const track = document.getElementById('slideshowTrack');
+
+        function updateSlidePosition() {
+            track.style.transform = `translateX(-${currentIndex * 100}%)`;
+            slides[currentIndex].style.transform = "scale(0.95)"; // Zoom-out effect
+            setTimeout(() => slides[currentIndex].style.transform = "scale(1)", 400); // Reset to normal size
+        }
+
+        function moveSlide(direction) {
+            currentIndex += direction;
+            if (currentIndex < 0) currentIndex = totalSlides - 1;
+            if (currentIndex >= totalSlides) currentIndex = 0;
+            updateSlidePosition();
+        }
+
+        // Automatic Slideshow
+        setInterval(() => {
+            moveSlide(1);
+        }, 3000);
+    </script>
+</body>
+</html>
+

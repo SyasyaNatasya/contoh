@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background: url('d3.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        /* Header Navigation */
+        header {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 10;
+        }
+
+        header nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        header nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        header nav a:hover {
+            color: #f3c97d;
+        }
+
+        /* Main Container */
+        .container {
+            margin-top: 120px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Introduction Section */
+        .intro-section {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            max-width: 900px;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .intro-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .intro-content {
+            max-width: 50%;
+            text-align: left;
+            color: #4a4a4a;
+        }
+
+        .intro-content h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: #000;
+        }
+
+        .intro-content p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .intro-media {
+            max-width: 50%;
+            text-align: center;
+        }
+
+        .intro-media img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Media Section (Song and Video) */
+        .media-section {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        .media-section audio,
+        .media-section iframe {
+            width: 100%;
+            max-width: 800px;
+            margin: 10px 0;
+            border-radius: 12px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Fun Facts Section */
+        .fun-facts {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            margin: 30px auto;
+        }
+
+        .fun-facts .card {
+            background: #ffe4e1;
+            color: #4a4a4a;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+            cursor: pointer;
+        }
+
+        .fun-facts .card:hover {
+            transform: translateX(-10px) rotate(-2deg);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .fun-facts .card h3 {
+            font-size: 1.5rem;
+            color: #ff6f61;
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    <!-- Fonts and Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header Navigation -->
+    <header>
+        <nav>
+            <a href="home.html"><i class="fas fa-home"></i> Home</a>
+            <a href="about.html"><i class="fas fa-user"></i> About Me</a>
+            <a href="education.html"><i class="fas fa-graduation-cap"></i> Education</a>
+            <a href="experience.html"><i class="fas fa-briefcase"></i> Experience</a>
+            <a href="family.html"><i class="fas fa-users"></i> Family</a>
+            <a href="gallery.html"><i class="fas fa-images"></i> Gallery</a>
+            <a href="contact_me.html"><i class="fas fa-envelope"></i> Contact Me</a>
+        </nav>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Introduction Section -->
+        <div class="intro-section">
+            <div class="intro-content">
+                <h1>Hello Bestie!</h1>
+                <p>
+                    Hey guys! I'm Nur Shahira Natasya Binti Shah Rizal Yuzman, but you can just call me Tasya. I was born on 12 January 2004, and I love spending my time listening to music, visiting places, shopping, and watching motivational podcasts my favorite is, Wizard Liz. My favorite food is definitely spaghetti carbonara! One day, I dream of visiting Maldives, Turkey, and Indonesia. Here is my favorite song at the moment... 
+                </p>
+            </div>
+            <div class="intro-media">
+                <img src="her.jpg" alt="Tasya's Portrait">
+            </div>
+        </div>
+
+        <!-- Media Section -->
+        <div class="media-section">
+            <audio controls>
+                <source src="sza.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+            <iframe src="kill.mp4" allowfullscreen></iframe>
+        </div>
+
+        <!-- Fun Facts Section -->
+        <div class="fun-facts">
+            <div class="card">
+                <h3>Favorite Food</h3>
+                <p>Spaghetti Carbonara 🍝</p>
+            </div>
+            <div class="card">
+                <h3>Dream Destination</h3>
+                <p>Maldives & Turkey 🌍</p>
+            </div>
+            <div class="card">
+                <h3>Current Jam</h3>
+                <p>"Kill Bill" by SZA 🎶</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Natasya Shah. Designed with love and pure soul.</p>
+    </footer>
+</body>
+</html>
+
+

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: url('d3.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            text-align: center;
+        }
+
+        /* Header Navigation */
+        header {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 10;
+        }
+
+        header nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            list-style: none;
+        }
+
+        header nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        header nav a:hover {
+            color: #f3c97d;
+        }
+
+        header nav a i {
+            margin-right: 5px;
+        }
+
+        /* Main Content */
+        .experience-container {
+            margin: 150px auto 50px;
+            max-width: 1200px;
+            padding: 30px;
+            color: #fff;
+        }
+
+        .experience-container h1 {
+            font-size: 3rem;
+            font-family: 'Great Vibes', cursive;
+            margin-bottom: 30px;
+            margin-top: 2px; /* Reduced margin to move title upward */
+            text-shadow: 2px 2px 5px #000;
+        }
+
+        /* Frame Layout */
+        .frame-row {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap; /* Allows wrapping for smaller screens */
+        }
+
+        .frame {
+            background-color: #fff;
+            color: #4a4a4a;
+            border-radius: 12px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+            overflow: hidden;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+        }
+
+        .frame:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
+        }
+
+        .frame-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .image-frame {
+            margin: 0 auto 15px;
+            max-width: 200px;
+            border: 5px solid #ffe4e1;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .image-frame img {
+            width: 100%;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .image-frame:hover img {
+            transform: scale(1.1);
+        }
+
+        .frame-content {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-top: 10px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+    <!-- Fonts and Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header Navigation -->
+    <header>
+        <nav>
+            <a href="home.html"><i class="fas fa-home"></i> Home</a>
+            <a href="about.html"><i class="fas fa-user"></i> About Me</a>
+            <a href="education.html"><i class="fas fa-graduation-cap"></i> Education</a>
+            <a href="experience.html"><i class="fas fa-briefcase"></i> Experience</a>
+            <a href="family.html"><i class="fas fa-users"></i> Family</a>
+            <a href="gallery.html"><i class="fas fa-images"></i> Gallery</a>
+            <a href="contact.html"><i class="fas fa-envelope"></i> Contact Me</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="experience-container">
+        <h1>My Experience 🌟</h1>
+        
+        <div class="frame-row">
+            <!-- Frame 1: Internship Journey -->
+            <div class="frame">
+                <div class="frame-title">Internship Journey</div>
+                <div class="image-frame">
+                    <img src="intern.png" alt="Internship">
+                </div>
+                <div class="frame-content">
+                    I had the opportunity to complete my industrial training at Jabatan Pendidikan Negeri Terengganu (JPNT) for two months. It was an enriching experience that taught me new skills and provided exposure to a professional environment.
+                </div>
+            </div>
+
+            <!-- Frame 2: Programs I Handled -->
+            <div class="frame">
+                <div class="frame-title">Programs I Handled</div>
+                <div class="image-frame">
+                    <img src="program.jpg" alt="Programs">
+                </div>
+                <div class="frame-content">
+                    During my internship, I was involved in organizing multiple programs, including workshops, seminars, and events. I developed skills in teamwork, coordination, and effective communication.
+                </div>
+            </div>
+
+            <!-- Frame 3: My Soft Skills -->
+            <div class="frame">
+                <div class="frame-title">My Soft Skills</div>
+                <div class="image-frame">
+                    <img src="skil.jpg" alt="Soft Skills">
+                </div>
+                <div class="frame-content">
+                    My internship helped me refine my soft skills, such as problem-solving, leadership, adaptability, and interpersonal communication. These skills are essential for both personal and professional growth.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Natasya Shah. Designed with love and pure soul.</p>
+    </footer>
+</body>
+</html>
+
+
